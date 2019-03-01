@@ -615,6 +615,11 @@ export default {
       const y = Math.round(pendingY / grid[1]) * grid[1]
 
       return [x, y]
+    },
+    setData: function (data) {
+      Object.keys(data).forEach((key) => {
+        this[key] = data[key];
+      });
     }
   },
   computed: {
